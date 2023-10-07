@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CanchaDA.cs" />
     <Compile Include="UsuarioDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

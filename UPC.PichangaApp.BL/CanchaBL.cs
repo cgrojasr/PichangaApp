@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UPC.PichangaApp.BE;
 using UPC.PichangaApp.DA;
+using UPC.PichangaApp.EF;
 
 namespace UPC.PichangaApp.BL
 {

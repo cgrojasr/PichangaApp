@@ -54,6 +54,10 @@
       <Project>{1cda9d98-4e2e-4464-98d1-503d8f7c215d}</Project>
       <Name>UPC.PichangaApp.DA</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UPC.PichangaApp.EF\UPC.PichangaApp.EF.csproj">
+      <Project>{9AF292AF-1A8E-458D-8AAB-9A9665A48AE6}</Project>
+      <Name>UPC.PichangaApp.EF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

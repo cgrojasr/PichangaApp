@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UPC.PichangaApp.EF
+namespace UPC.PichangaApp.DA
 {
-    public class Class1
+    public class RerservaDA
     {
     }
 }

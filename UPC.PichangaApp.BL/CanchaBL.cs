@@ -27,5 +27,9 @@ namespace UPC.PichangaApp.BL
                 throw;
             }
         }
+
+        public int Buscar_Capacidad(int id_cancha) {
+            return objCanchaDA.Buscar_Capacidad(id_cancha);
+        }
     }
 }

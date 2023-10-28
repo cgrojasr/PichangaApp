@@ -57,7 +57,7 @@
   <ItemGroup>
     <Compile Include="CanchaDA.cs" />
     <Compile Include="HorarioDA.cs" />
-    <Compile Include="RerservaDA.cs" />
+    <Compile Include="ReservaDA.cs" />
     <Compile Include="UsuarioDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -25,10 +25,9 @@ namespace UPC.PichangaApp.EF
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<cancha> canchas { get; set; }
         public virtual DbSet<cliente> clientes { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<reserva_detalle> reserva_detalle { get; set; }
+        public virtual DbSet<cancha> canchas { get; set; }
         public virtual DbSet<horario> horarios { get; set; }
         public virtual DbSet<reserva> reservas { get; set; }
     }

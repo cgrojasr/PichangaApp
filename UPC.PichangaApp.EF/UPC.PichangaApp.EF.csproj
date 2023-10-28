@@ -89,9 +89,6 @@
     <Compile Include="reserva_detalle.cs">
       <DependentUpon>dbPichangeros.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>dbPichangeros.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="dbPichangeros.edmx">

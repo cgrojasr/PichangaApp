@@ -5,15 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="f1f10525cdbd4be8bdbc7595ae09f283" Name="Diagram1">
-        <EntityTypeShape EntityType="dbPichangerosModel.cancha" Width="1.5" PointX="2.75" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="dbPichangerosModel.cliente" Width="1.5" PointX="9" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbPichangerosModel.sysdiagram" Width="1.5" PointX="12.125" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="dbPichangerosModel.reserva_detalle" Width="1.5" PointX="5.75" PointY="5" />
         <AssociationConnector Association="dbPichangerosModel.FK_reserva_detalle_cliente" />
-        <EntityTypeShape EntityType="dbPichangerosModel.horario" Width="1.5" PointX="2.875" PointY="3.75" />
+        <EntityTypeShape EntityType="dbPichangerosModel.cancha" Width="1.5" PointX="2.625" PointY="0.875" />
+        <EntityTypeShape EntityType="dbPichangerosModel.horario" Width="1.5" PointX="3.125" PointY="4.625" />
         <AssociationConnector Association="dbPichangerosModel.FK_horario_cancha" />
-        <EntityTypeShape EntityType="dbPichangerosModel.reserva" Width="1.5" PointX="5.625" PointY="0.5" />
-        <AssociationConnector Association="dbPichangerosModel.FK_reserva_cliente" />
+        <EntityTypeShape EntityType="dbPichangerosModel.reserva" Width="1.5" PointX="5.625" PointY="1" />
+        <AssociationConnector Association="dbPichangerosModel.FK_reserva_cliente1" />
         <AssociationConnector Association="dbPichangerosModel.FK_reserva_horario" />
         <AssociationConnector Association="dbPichangerosModel.FK_reserva_detalle_reserva" />
       </Diagram>

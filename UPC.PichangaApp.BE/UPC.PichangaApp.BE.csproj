@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CanchaBE.cs" />
+    <Compile Include="HorarioBE_ListarComboBox.cs" />
     <Compile Include="ReservaBE.cs" />
+    <Compile Include="ReservaBE_ListarPorCliente.cs" />
     <Compile Include="UsuarioBE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBE_Login.cs" />

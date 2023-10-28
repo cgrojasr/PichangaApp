@@ -21,11 +21,9 @@ namespace UPC.PichangaApp.EF
         }
     
         public int id_reserva { get; set; }
-        public int id_cancha { get; set; }
         public int id_cliente { get; set; }
         public int id_horario { get; set; }
         public System.DateTime fecha_registro { get; set; }
-        public decimal precio_venta { get; set; }
         public int cantidad_disponible { get; set; }
         public bool activo { get; set; }
     

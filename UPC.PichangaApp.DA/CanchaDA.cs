@@ -54,5 +54,13 @@ namespace UPC.PichangaApp.DA
             //var query = canchas.FindAll(x=>x.activo).ToList();
             return query;
         }
+
+        public int Buscar_Capacidad(int id_cancha) {
+            var query = from can in context.canchas
+                        where can.id_cancha.Equals(id_cancha)
+                        select can.capacidad;
+
+            return query.SingleOrDefault();
+        }
     }
 }

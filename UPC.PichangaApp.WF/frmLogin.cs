@@ -25,7 +25,7 @@ namespace UPC.PichangaApp.WF
             {
                 var usuario_login = new UsuarioBE_Login
                 {
-                    nombre_usuario = txtUsuario.Text,
+                    usuario = txtUsuario.Text,
                     password = txtPassword.Text
                 };
 

@@ -22,8 +22,9 @@ namespace UPC.PichangaApp.EF
     
         public int id_cancha { get; set; }
         public string nombre { get; set; }
+        public int capacidad { get; set; }
         public bool activo { get; set; }
-        public Nullable<int> capacidad { get; set; }
+        public decimal precio_alquiler { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<horario> horarios { get; set; }

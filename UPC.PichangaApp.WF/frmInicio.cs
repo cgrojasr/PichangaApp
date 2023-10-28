@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UPC.PichangaApp.BL;
 
 namespace UPC.PichangaApp.WF
 {
@@ -15,12 +16,20 @@ namespace UPC.PichangaApp.WF
         public frmInicio()
         {
             InitializeComponent();
+            CargarReservas(GlobalVariables.id_usaurio);
         }
 
         private void btnNuevaReserva_Click(object sender, EventArgs e)
         {
             var frmReservaRegistro = new frmReservaRegistro();
             frmReservaRegistro.ShowDialog();
+        }
+
+        private void CargarReservas(int id_cliente) {
+            var objReservaBL = new ReservaBL();
+            var reservas = objReservaBL.ListarPorCliente(id_cliente);
+
+            dgvReservas.DataSource = reservas;
         }
     }
 }

@@ -55,6 +55,7 @@
             this.cbCancha.Name = "cbCancha";
             this.cbCancha.Size = new System.Drawing.Size(121, 21);
             this.cbCancha.TabIndex = 1;
+            this.cbCancha.SelectedIndexChanged += new System.EventHandler(this.cbCancha_SelectedIndexChanged);
             // 
             // lblCantidadJugadores
             // 
@@ -82,6 +83,8 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(97, 20);
             this.dtpFecha.TabIndex = 4;
+            this.dtpFecha.Value = new System.DateTime(2023, 10, 26, 17, 30, 40, 0);
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // lblFecha
             // 

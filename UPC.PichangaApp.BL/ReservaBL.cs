@@ -24,5 +24,14 @@ namespace UPC.PichangaApp.BL
         public List<ReservaBE_ListarPorCliente> ListarPorCliente(int id_cliente) {
             return objReservaDA.ListarPorCliente(id_cliente);
         }
+
+        public ReservaBE BuscarPorId(int id_reserva) { 
+            return objReservaDA.BuscarPorId(id_reserva);
+        }
+
+        public bool Modificar(ReservaBE objReservaBE)
+        {
+            return objReservaDA.Modificar(objReservaBE);
+        }
     }
 }

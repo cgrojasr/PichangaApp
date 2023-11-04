@@ -21,7 +21,7 @@ namespace UPC.PichangaApp.WF
 
         private void btnNuevaReserva_Click(object sender, EventArgs e)
         {
-            var frmReservaRegistro = new frmReservaRegistro();
+            var frmReservaRegistro = new frmReservaRegistro(false);
             frmReservaRegistro.ShowDialog();
         }
 
@@ -30,6 +30,17 @@ namespace UPC.PichangaApp.WF
             var reservas = objReservaBL.ListarPorCliente(id_cliente);
 
             dgvReservas.DataSource = reservas;
+        }
+
+        private void dgvReservas_DoubleClick(object sender, EventArgs e)
+        {
+            var cell = dgvReservas.CurrentCell;
+            if(cell.ColumnIndex == 1 )
+            {
+                var id_reserva = dgvReservas.CurrentCell.Value;
+                var frmReserva = new frmReservaRegistro(true, (int)id_reserva);
+                frmReserva.ShowDialog();
+            }
         }
     }
 }

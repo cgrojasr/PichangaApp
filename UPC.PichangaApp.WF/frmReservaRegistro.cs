@@ -15,24 +15,51 @@ namespace UPC.PichangaApp.WF
 {
     public partial class frmReservaRegistro : Form
     {
-        public frmReservaRegistro()
+        private readonly int id_reserva;
+        private readonly bool modificar;
+
+        public frmReservaRegistro(bool modificar, int id_reserva = 0)
         {
             InitializeComponent();
             CargaCancha();
             dtpFecha.Value = DateTime.Now;
+
+            if(modificar)
+            {
+                this.id_reserva = id_reserva;
+                this.modificar = modificar;
+                CargarDatosReserva();
+            }
+        }
+
+        private void CargarDatosReserva()
+        {
+            var objReservaBL = new ReservaBL();
+            var objReservaBE = objReservaBL.BuscarPorId(this.id_reserva);
+            cbCancha.SelectedValue = objReservaBE.id_cancha;
+            cbHora.SelectedValue = objReservaBE.id_horario;
+            dtpFecha.Value = objReservaBE.fecha_reserva;
+            txtCantidadJugadores.Text = objReservaBE.cantidad_disponible.ToString();
+            btnRegistrar.Text = "Guardar";
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            var objReserva = new ReservaBE {
+            var objReservaBL = new ReservaBL();
+            var objReserva = new ReservaBE
+            {
                 id_cliente = GlobalVariables.id_usaurio,
                 cantidad_disponible = int.Parse(txtCantidadJugadores.Text),
                 id_horario = (int)cbCancha.SelectedValue,
                 activo = true
             };
-
-            var objReservaBL = new ReservaBL();
-            objReservaBL.Registrar(objReserva);
+            if (modificar) {
+                objReserva.id_reserva = this.id_reserva;
+                objReservaBL.Modificar(objReserva);
+            } else
+            {
+                objReservaBL.Registrar(objReserva);
+            }
 
             Close();
         }

@@ -85,6 +85,7 @@
             this.dgvReservas.Name = "dgvReservas";
             this.dgvReservas.Size = new System.Drawing.Size(444, 150);
             this.dgvReservas.TabIndex = 1;
+            this.dgvReservas.DoubleClick += new System.EventHandler(this.dgvReservas_DoubleClick);
             // 
             // id_reserva
             // 

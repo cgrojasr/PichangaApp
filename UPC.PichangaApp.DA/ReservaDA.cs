@@ -33,17 +33,10 @@ namespace UPC.PichangaApp.DA
         }
 
         public bool Modificar(ReservaBE objReservaBE) {
-            var objReserva = new reserva {
-                id_reserva = objReservaBE.id_reserva,
-                id_cliente = objReservaBE.id_cliente,
-                id_horario = objReservaBE.id_horario,
-                fecha_registro = DateTime.Now,
-                cantidad_disponible = objReservaBE.cantidad_disponible,
-                activo = true
-            };
-
-            var objReserva_Actualizar = db.reservas.ToList().Find(x => x.id_cliente.Equals(objReservaBE.id_reserva));
-            objReserva_Actualizar = objReserva;
+            var objReserva_Actualizar = db.reservas.ToList().Find(x => x.id_reserva.Equals(objReservaBE.id_reserva));
+            objReserva_Actualizar.id_horario = objReservaBE.id_horario;
+            objReserva_Actualizar.cantidad_disponible = objReservaBE.cantidad_disponible;
+            objReserva_Actualizar.fecha_registro = DateTime.Now;
 
             db.SaveChanges();
 
@@ -58,12 +51,13 @@ namespace UPC.PichangaApp.DA
         }
 
         public ReservaBE BuscarPorId(int id_reserva) {
-            var objReserva = db.reservas.ToList().Find(x => x.id_cliente.Equals(id_reserva));
+            var objReserva = db.reservas.ToList().Find(x => x.id_reserva.Equals(id_reserva));
 
             var objReservaBE = new ReservaBE { 
                 id_reserva = objReserva.id_reserva,
                 id_cliente = objReserva.id_cliente,
                 id_horario = objReserva.id_horario,
+                id_cancha = objReserva.horario.id_cancha,
                 cantidad_disponible = objReserva.cantidad_disponible,
                 activo = objReserva.activo
             };
